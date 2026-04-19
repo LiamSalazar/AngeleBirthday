@@ -304,7 +304,7 @@ input {
 .track-thumb {
   width: 64px;
   height: 64px;
-  border-radius: 14px;
+  border-radius: 1000px;
   object-fit: cover;
   background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(228,183,199,0.95));
 }
