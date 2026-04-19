@@ -1,11 +1,3 @@
-/*
-  Edita este archivo para personalizar la app.
-  1) Cambia las frases del scroll inicial.
-  2) Cambia las 6 canciones.
-  3) Agrega los archivos MP3 dentro de /assets/audio
-  4) Agrega las portadas dentro de /assets/covers
-*/
-
 window.APP_CONFIG = {
   landing: {
     phrases: [
