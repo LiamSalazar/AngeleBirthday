@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="player-body">
+  <main class="player-layout">
+    <section class="player-shell">
+      <aside class="playlist-panel">
+        <div class="playlist-header">
+          <p class="eyebrow">Playlist</p>
+          <h1>Angèle</h1>
+          <p class="playlist-copy">A playlist of songs that now have sense and belong to you. Happy Birthday, thank you for existing.</p>
+        </div>
+        <div id="playlist" class="playlist"></div>
+      </aside>
+
+      <section class="player-panel">
+        <div class="player-card">
+          <div class="cover-wrap">
+            <div id="coverDisc" class="cover-disc">
+              <img id="coverImage" src="" alt="Portada de la canción" />
+              <div class="disc-hole"></div>
+            </div>
+          </div>
+
+          <div class="track-meta">
+            <p class="now-playing">Now playing</p>
+            <h2 id="trackTitle">Selecciona una canción</h2>
+            <p id="trackArtist" class="track-artist">Tu dedicatoria musical</p>
+          </div>
+
+          <div class="controls">
+            <button id="prevBtn" class="control-btn" type="button" aria-label="Anterior">⏮</button>
+            <button id="playBtn" class="play-btn" type="button" aria-label="Reproducir">▶</button>
+            <button id="nextBtn" class="control-btn" type="button" aria-label="Siguiente">⏭</button>
+          </div>
+
+          <div class="progress-wrap">
+            <span id="currentTime">0:00</span>
+            <input id="progressBar" type="range" min="0" max="100" value="0" />
+            <span id="duration">0:00</span>
+          </div>
+
+          <audio id="audio" preload="metadata"></audio>
+        </div>
+
+        <div class="lyrics-card">
+          <p class="lyrics-label">Frase actual</p>
+          <div id="currentPhrase" class="current-phrase">
+            Aquí aparecerá la frase sincronizada con la canción.
+          </div>
+
+          <div class="upcoming-wrap">
+            <p class="upcoming-label">Siguientes frases</p>
+            <div id="upcomingPhrases" class="upcoming-phrases"></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>

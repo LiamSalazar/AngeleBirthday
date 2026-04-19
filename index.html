@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para ti</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="landing-body">
+
+  <canvas id="fireworksCanvas" aria-hidden="true"></canvas>
+
+  <div class="noise"></div>
+  <div class="stars"></div>
+
+  <!-- Pantalla inicial para desbloquear el audio -->
+  <div id="startOverlay" class="start-overlay">
+    <div class="start-card">
+      <p class="start-kicker">I hope you you to have a great day!!!</p>
+      <h2 class="start-title">Happy birthday my tiburoncito</h2>
+      <button id="startButton" class="start-button">Start</button>
+    </div>
+  </div>
+
+  <header class="landing-header">
+    <span class="header-pill">Solo para ella</span>
+    <span class="header-pill">Desliza hacia abajo</span>
+  </header>
+
+  <main id="landingApp" class="landing-app">
+    <section class="hero-section">
+      <div class="hero-inner">
+        <p class="hero-kicker">Una experiencia hecha con cariño</p>
+        <h1 class="hero-title">Desliza y deja que cada frase aparezca contigo.</h1>
+      </div>
+    </section>
+
+    <section id="phraseContainer" class="phrase-container" aria-label="Frases con parallax"></section>
+
+    <section class="open-section">
+      <div class="open-card">
+        <p class="open-label">Al llegar hasta aquí...</p>
+        <h2 class="open-title">Hay algo más esperándote.</h2>
+        <a class="open-button" href="player.html">Open me</a>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/audio/00-The-Kid-LAROI-NIGHTS-LIKE-THIS.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    const audio = document.getElementById("bg-music");
+    const startOverlay = document.getElementById("startOverlay");
+    const startButton = document.getElementById("startButton");
+
+    let started = false;
+
+    function startExperience() {
+      if (started) return;
+      audio.currentTime = 9;
+      audio.volume = 0.35;
+
+      audio.play()
+        .then(() => {
+          started = true;
+          startOverlay.classList.add("hidden");
+          document.body.classList.add("experience-started");
+        })
+        .catch((error) => {
+          console.log("No se pudo iniciar el audio:", error);
+        });
+    }
+
+    startButton.addEventListener("click", startExperience);
+    startOverlay.addEventListener("touchstart", startExperience, { passive: true });
+    startOverlay.addEventListener("pointerdown", startExperience);
+  </script>
+
+  <style>
+    .start-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 30%),
+        rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(8px);
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .start-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .start-card {
+      width: min(90%, 420px);
+      padding: 28px 24px;
+      text-align: center;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    }
+
+    .start-kicker {
+      margin: 0 0 10px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .start-title {
+      margin: 0 0 20px;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .start-button {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111;
+      background: #ffffff;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .start-button:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+  </style>
+</body>
+</html>
