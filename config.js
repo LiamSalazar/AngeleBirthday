@@ -22,29 +22,10 @@ window.APP_CONFIG = {
   songs: [
     {
       id: "song-1",
-      title: "Risk It All",
-      artist: "Bruno Mars, Anderson .Paak, Silk Sonic",
-      file: "assets/audio/00-Bruno-Mars-Risk-It-All.mp3",
-      cover: "assets/covers/cover-1.jpg",
-      phrases: [
-        { time: 0, text: "Frase 1 de la canción 1." },
-        { time: 12, text: "Frase 2 de la canción 1." },
-        { time: 24, text: "Frase 3 de la canción 1." },
-        { time: 36, text: "Frase 4 de la canción 1." },
-        { time: 48, text: "Frase 5 de la canción 1." },
-        { time: 60, text: "Frase 6 de la canción 1." },
-        { time: 72, text: "Frase 7 de la canción 1." },
-        { time: 84, text: "Frase 8 de la canción 1." },
-        { time: 96, text: "Frase 9 de la canción 1." },
-        { time: 108, text: "Frase 10 de la canción 1." }
-      ]
-    },
-    {
-      id: "song-2",
       title: "Disfruto",
       artist: "Carla Morrison",
       file: "assets/audio/00-Carla-Morrison-Disfruto.mp3",
-      cover: "assets/covers/cover-2.jpg",
+      cover: "assets/covers/cover-1.png",
       phrases: [
         { time: 0, text: "Frase 1 de la canción 2." },
         { time: 11, text: "Frase 2 de la canción 2." },
@@ -59,11 +40,30 @@ window.APP_CONFIG = {
       ]
     },
     {
+      id: "song-2",
+      title: "Risk It All",
+      artist: "Bruno Mars",
+      file: "assets/audio/00-Bruno-Mars-Risk-It-All.mp3",
+      cover: "assets/covers/cover-1.png",
+      phrases: [
+        { time: 0, text: "Frase 1 de la canción 1." },
+        { time: 12, text: "Frase 2 de la canción 1." },
+        { time: 24, text: "Frase 3 de la canción 1." },
+        { time: 36, text: "Frase 4 de la canción 1." },
+        { time: 48, text: "Frase 5 de la canción 1." },
+        { time: 60, text: "Frase 6 de la canción 1." },
+        { time: 72, text: "Frase 7 de la canción 1." },
+        { time: 84, text: "Frase 8 de la canción 1." },
+        { time: 96, text: "Frase 9 de la canción 1." },
+        { time: 108, text: "Frase 10 de la canción 1." }
+      ]
+    },
+    {
       id: "song-3",
-      title: "Canción 3",
-      artist: "Tu dedicatoria 3",
-      file: "assets/audio/song-3.mp3",
-      cover: "assets/covers/cover-3.jpg",
+      title: "Falling in Love",
+      artist: "Cigarettes After Sex",
+      file: "assets/audio/00-Cigarettes-After-Sex-Falling-In-Love.mp3",
+      cover: "assets/covers/cover-1.png",
       phrases: [
         { time: 0, text: "Frase 1 de la canción 3." },
         { time: 10, text: "Frase 2 de la canción 3." },
@@ -79,10 +79,10 @@ window.APP_CONFIG = {
     },
     {
       id: "song-4",
-      title: "Canción 4",
-      artist: "Tu dedicatoria 4",
-      file: "assets/audio/song-4.mp3",
-      cover: "assets/covers/cover-4.jpg",
+      title: "Can't Help Falling in Love",
+      artist: "Elvis Presley",
+      file: "assets/audio/00-Elvis-Presley-Can_t-Help-Falling-In-Love.mp3",
+      cover: "assets/covers/cover-1.png",
       phrases: [
         { time: 0, text: "Frase 1 de la canción 4." },
         { time: 14, text: "Frase 2 de la canción 4." },
@@ -98,10 +98,10 @@ window.APP_CONFIG = {
     },
     {
       id: "song-5",
-      title: "Canción 5",
-      artist: "Tu dedicatoria 5",
-      file: "assets/audio/song-5.mp3",
-      cover: "assets/covers/cover-5.jpg",
+      title: "Halo",
+      artist: "The Cure",
+      file: "assets/audio/00-The-Cure-Halo.mp3",
+      cover: "assets/covers/cover-1.png",
       phrases: [
         { time: 0, text: "Frase 1 de la canción 5." },
         { time: 9, text: "Frase 2 de la canción 5." },
@@ -117,10 +117,48 @@ window.APP_CONFIG = {
     },
     {
       id: "song-6",
-      title: "Canción 6",
-      artist: "Tu dedicatoria 6",
-      file: "assets/audio/song-6.mp3",
-      cover: "assets/covers/cover-6.jpg",
+      title: "Everlong",
+      artist: "Foo Fighters",
+      file: "assets/audio/00-Foo-Fighters-Everlong.mp3",
+      cover: "assets/covers/cover-1.png",
+      phrases: [
+        { time: 0, text: "Frase 1 de la canción 6." },
+        { time: 13, text: "Frase 2 de la canción 6." },
+        { time: 26, text: "Frase 3 de la canción 6." },
+        { time: 39, text: "Frase 4 de la canción 6." },
+        { time: 52, text: "Frase 5 de la canción 6." },
+        { time: 65, text: "Frase 6 de la canción 6." },
+        { time: 78, text: "Frase 7 de la canción 6." },
+        { time: 91, text: "Frase 8 de la canción 6." },
+        { time: 104, text: "Frase 9 de la canción 6." },
+        { time: 117, text: "Frase 10 de la canción 6." }
+      ]
+    },
+    {
+      id: "song-7",
+      title: "Parisienne Walkways",
+      artist: "Gary Moore",
+      file: "assets/audio/00-Gary-Moore-Parisienne-Walkways-_Live-At-Royal-Albert-Hall_-London-_-1993_.mp3",
+      cover: "assets/covers/cover-1.png",
+      phrases: [
+        { time: 0, text: "Frase 1 de la canción 6." },
+        { time: 13, text: "Frase 2 de la canción 6." },
+        { time: 26, text: "Frase 3 de la canción 6." },
+        { time: 39, text: "Frase 4 de la canción 6." },
+        { time: 52, text: "Frase 5 de la canción 6." },
+        { time: 65, text: "Frase 6 de la canción 6." },
+        { time: 78, text: "Frase 7 de la canción 6." },
+        { time: 91, text: "Frase 8 de la canción 6." },
+        { time: 104, text: "Frase 9 de la canción 6." },
+        { time: 117, text: "Frase 10 de la canción 6." }
+      ]
+    },
+    {
+      id: "song-8",
+      title: "Iris",
+      artist: "Goo Goo Dolls",
+      file: "assets/audio/00-The-Goo-Goo-Dolls-Iris.mp3",
+      cover: "assets/covers/cover-1.png",
       phrases: [
         { time: 0, text: "Frase 1 de la canción 6." },
         { time: 13, text: "Frase 2 de la canción 6." },

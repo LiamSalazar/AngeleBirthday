@@ -103,7 +103,7 @@
 
     upcomingPhrases.innerHTML = "";
     if (!upcoming.length) {
-      upcomingPhrases.innerHTML = `<div class="empty-state">No hay más frases después de esta. Puedes agregar más en <strong>config.js</strong>.</div>`;
+      upcomingPhrases.innerHTML = `<div class="empty-state">I love you so much</strong>.</div>`;
       return;
     }
 
